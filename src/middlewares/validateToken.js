@@ -4,14 +4,14 @@ const secretToken = process.env.JWT_SECRET || 'notSoSecretToken';
 
 const validateToken = (req, res, next) => {
   try {
-    const bearerToken = req.header('Authorization');
-    if (!bearerToken) {
+    const portadorToken = req.header('Authorization');
+    if (!portadorToken) {
       return res.status(401).json({ message: 'Token not found' });
     }
 
-    const extractToken = bearerToken.split(' ')[1];
+    const extraindoToken = portadorToken.split(' ')[1];
 
-    const payload = jwt.verify(extractToken, secretToken);
+    const payload = jwt.verify(extraindoToken, secretToken);
     req.user = payload;
     next();
   } catch (error) {
