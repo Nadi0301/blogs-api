@@ -1,63 +1,46 @@
-# Blogs API
+﻿# Blogs API
 
-**Desenvolvedora: Nadijane Souza**
+API RESTful desenvolvida em **Node.js**, **Express** e **Sequelize** para gerenciamento de usuários, categorias e postagens de blog, com autenticação via **JWT**.
 
-API REST para gerenciamento de conteúdo de blog, desenvolvida com Node.js, Express e MySQL, utilizando Sequelize.
+## Sobre o Projeto
 
-Projeto desenvolvido durante minha formação em desenvolvimento de software na Trybe, com foco em práticas de desenvolvimento backend.
+A **Blogs API** estrutura um serviço back-end com arquitetura em camadas, relacionamentos entre entidades no banco de dados relacional, validação de requisições e controle de acesso por token.
 
-## Tecnologias utilizadas
+### Principais Recursos Implementados
 
-- Node.js
-- Express
-- Sequelize
-- MySQL
-- JWT
-- Joi
-- Docker
+- **Autenticação com JWT**: Login com validação de credenciais e emissão de token para proteção das rotas de escrita e consulta.
+- **Usuários e Categorias**: Cadastro e consulta de usuários e categorias com validações de payload.
+- **Gerenciamento de Postagens**: Criação, listagem, busca, edição e exclusão de posts vinculando autor e categorias.
+- **ORM e Relacionamentos**: Modelagem de tabelas, associações e transações com **Sequelize**.
 
-## Funcionalidades
+## Tecnologias Utilizadas
 
-- Cadastro e consulta de usuários.
-- Login e autenticação com JWT.
-- Cadastro e listagem de categorias.
-- Criação e consulta de publicações.
-- Pesquisa de publicações.
-- Proteção de rotas.
+- **Node.js**
+- **Express**
+- **Sequelize**
+- **MySQL**
+- **JWT (JSON Web Token)**
+- **ESLint**
 
-## Estrutura do projeto
+## Como Executar Localmente
 
-- `controllers`: controle das requisições.
-- `services`: regras de negócio.
-- `models`: modelos do banco de dados.
-- `routes`: rotas da API.
-- `middlewares`: autenticação e validações.
-- `migrations`: estrutura do banco de dados.
+1. Clone este repositório:
+   ``bash
+   git clone [https://github.com/Nadi0301/blogs-api.git](https://github.com/Nadi0301/blogs-api.git)
+   ``
 
-## Como executar
-
-Pré-requisitos: Node.js 16 ou superior e MySQL.
-
-1. Clone o repositório:
-
-   `git clone https://github.com/Nadi0301/blogs-api.git`
-
-2. Entre na pasta:
-
-   `cd blogs-api`
+2. Acesse a pasta do projeto:
+   ``bash
+   cd blogs-api
+   ``
 
 3. Instale as dependências:
+   ``bash
+   npm install
+   ``
 
-   `npm install`
+4. Configure as variáveis de ambiente e o banco de dados, depois inicie a aplicação conforme os scripts do package.json.
 
-4. Configure seu arquivo `.env` usando `env.example` como referência.
+---
 
-5. Inicie a aplicação:
-
-   `npm start`
-
-**Importante:** não publique seu arquivo `.env` nem compartilhe suas senhas.
-
-## Objetivo
-
-Praticar desenvolvimento backend, APIs REST, autenticação, validação de dados e integração com banco de dados relacional.
+Desenvolvido por **Nadijane Souza** — [GitHub](https://github.com/Nadi0301)
